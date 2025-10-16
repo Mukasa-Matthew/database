@@ -85,4 +85,4 @@ CREATE TABLE children (
     designation VARCHAR(20)
 );
 
-ALTER TABLE children ADD CONSTRAINT fk_employee FOREIGN KEY (id) REFERENCES employees(eid);
+ALTER TABLE children ADD CONSTRAINT fk_employee FOREIGN KEY (eid) REFERENCES employees(id);
