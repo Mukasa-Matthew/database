@@ -71,3 +71,18 @@ create view_b as select name, salary from employees where salary > 55000;
 
 ##Constarit Types
 
+select * from employees;
+
+CREATE TABLE children (
+    eid VARCHAR(20) PRIMARY KEY,
+    age INT CHECK (age > 18),
+    gender CHAR(1) CHECK (gender = 'M' OR gender = 'F'),
+    DOJ TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ename VARCHAR(20),
+    email VARCHAR(100),
+    telno INT,
+    salary INT,
+    designation VARCHAR(20)
+);
+
+ALTER TABLE children ADD CONSTRAINT fk_employee FOREIGN KEY (id) REFERENCES employees(eid);
